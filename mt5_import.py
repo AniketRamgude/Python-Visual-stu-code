@@ -22,7 +22,7 @@ TIMEFRAME_MAP = {
 def parse_args():
     p = argparse.ArgumentParser(description="Fetch symbol data from MT5 and save to CSV")
     p.add_argument("-s", "--symbol", default="XAUUSD", help="Symbol to fetch (default: BTCUSD)")
-    p.add_argument("-f", "--from", dest="utc_from", default="20001-01", help="Start date (YYYY-MM-DD) in UTC")
+    p.add_argument("-f", "--from", dest="utc_from", default="2000-1-1", help="Start date (YYYY-MM-DD) in UTC")
     p.add_argument("-t", "--to", dest="utc_to", default="2026-9-18", help="End date (YYYY-MM-DD) in UTC")
     p.add_argument("-r", "--timeframe", dest="timeframe", default="M15", choices=list(TIMEFRAME_MAP.keys()), help="Timeframe (M1,M5,M15,M30,H1,H4,D1)")
     p.add_argument("-o", "--outfile", default=None, help="Output CSV filename (default: SYMBOL_timeframe_from_to.csv)")
